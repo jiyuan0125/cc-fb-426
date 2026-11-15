@@ -1,0 +1,4 @@
+merged 2453
+dropped 77
+resends 31
+notes 同一扫描:同waybill且event与station均相同、时间差绝对值<=300s,按时差由小到大一对一配对;重发组的任一版本都可用来认亲,但输出内容(event/station/seq/ts)一律取最后到达版本;ts记承运商时间,仅镜像行记镜像时间;seq仅镜像行留空,合并行用承运商seq;承运商重发按(waybill,seq)保留最后到达行,其余只计入resends,不列入drops;drops的reason:foreign_waybill=运单不在清单,bad_row=站点空或时间不可解析
